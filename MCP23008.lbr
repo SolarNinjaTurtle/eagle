@@ -52,7 +52,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
@@ -71,34 +71,85 @@
 </layers>
 <library>
 <packages>
-<package name="3MM_HOLE">
-<pad name="P$1" x="0" y="0" drill="3.2" diameter="6"/>
-<pad name="P$2" x="0" y="2.2225" drill="0.5" diameter="0.6096" stop="no" thermals="no"/>
-<pad name="P$3" x="0" y="-2.2225" drill="0.5" diameter="0.6096" stop="no" thermals="no"/>
-<pad name="P$4" x="2.2225" y="0" drill="0.5" diameter="0.6096" stop="no" thermals="no"/>
-<pad name="P$5" x="-2.2225" y="0" drill="0.5" diameter="0.6096" stop="no" thermals="no"/>
-<pad name="P$6" x="-1.5875" y="1.5875" drill="0.5" diameter="0.6096" stop="no" thermals="no"/>
-<pad name="P$7" x="1.5875" y="1.5875" drill="0.5" diameter="0.6096" stop="no" thermals="no"/>
-<pad name="P$8" x="1.5875" y="-1.5875" drill="0.5" diameter="0.6096" stop="no" thermals="no"/>
-<pad name="P$9" x="-1.5875" y="-1.5875" drill="0.5" diameter="0.6096" stop="no" thermals="no"/>
+<package name="SOIC18">
+<smd name="1" x="-5.08" y="-4.7" dx="0.6" dy="2" layer="1"/>
+<smd name="2" x="-3.81" y="-4.7" dx="0.6" dy="2" layer="1"/>
+<smd name="3" x="-2.54" y="-4.7" dx="0.6" dy="2" layer="1"/>
+<smd name="4" x="-1.27" y="-4.7" dx="0.6" dy="2" layer="1"/>
+<smd name="5" x="0" y="-4.7" dx="0.6" dy="2" layer="1"/>
+<smd name="6" x="1.27" y="-4.7" dx="0.6" dy="2" layer="1"/>
+<smd name="7" x="2.54" y="-4.7" dx="0.6" dy="2" layer="1"/>
+<smd name="8" x="3.81" y="-4.7" dx="0.6" dy="2" layer="1"/>
+<smd name="9" x="5.08" y="-4.7" dx="0.6" dy="2" layer="1"/>
+<smd name="10" x="5.08" y="4.7" dx="0.6" dy="2" layer="1"/>
+<smd name="11" x="3.81" y="4.7" dx="0.6" dy="2" layer="1"/>
+<smd name="12" x="2.54" y="4.7" dx="0.6" dy="2" layer="1"/>
+<smd name="13" x="1.27" y="4.7" dx="0.6" dy="2" layer="1"/>
+<smd name="14" x="0" y="4.7" dx="0.6" dy="2" layer="1"/>
+<smd name="15" x="-1.27" y="4.7" dx="0.6" dy="2" layer="1"/>
+<smd name="16" x="-2.54" y="4.7" dx="0.6" dy="2" layer="1"/>
+<smd name="17" x="-3.81" y="4.7" dx="0.6" dy="2" layer="1"/>
+<smd name="18" x="-5.08" y="4.7" dx="0.6" dy="2" layer="1"/>
+<wire x1="-5.715" y1="3.175" x2="5.715" y2="3.175" width="0.127" layer="21"/>
+<wire x1="5.715" y1="3.175" x2="5.715" y2="-3.175" width="0.127" layer="21"/>
+<wire x1="5.715" y1="-3.175" x2="-5.715" y2="-3.175" width="0.127" layer="21"/>
+<wire x1="-5.715" y1="-3.175" x2="-5.715" y2="3.175" width="0.127" layer="21"/>
+<circle x="-4.7625" y="-2.2225" radius="0.3175" width="0.127" layer="21"/>
+<text x="-4.445" y="-0.3175" size="1.27" layer="25">MCP23008</text>
 </package>
 </packages>
 <symbols>
-<symbol name="3MM_HOLE">
-<pin name="GND" x="-5.08" y="0" visible="off" length="middle"/>
-<circle x="0" y="0" radius="2.54" width="0.254" layer="97"/>
+<symbol name="MCP23008">
+<pin name="GP0" x="17.78" y="10.16" visible="pin" length="middle" rot="R180"/>
+<pin name="GP1" x="17.78" y="7.62" visible="pin" length="middle" rot="R180"/>
+<pin name="GP2" x="17.78" y="5.08" visible="pin" length="middle" rot="R180"/>
+<pin name="GP3" x="17.78" y="2.54" visible="pin" length="middle" rot="R180"/>
+<pin name="GP4" x="17.78" y="0" visible="pin" length="middle" rot="R180"/>
+<pin name="GP5" x="17.78" y="-2.54" visible="pin" length="middle" rot="R180"/>
+<pin name="GP6" x="17.78" y="-5.08" visible="pin" length="middle" rot="R180"/>
+<pin name="GP7" x="17.78" y="-7.62" visible="pin" length="middle" rot="R180"/>
+<pin name="VCC" x="-10.16" y="10.16" visible="pin" length="middle"/>
+<pin name="GND" x="-10.16" y="-15.24" visible="pin" length="middle"/>
+<pin name="A0" x="-10.16" y="5.08" visible="pin" length="middle"/>
+<pin name="A1" x="-10.16" y="2.54" visible="pin" length="middle"/>
+<pin name="A2" x="-10.16" y="0" visible="pin" length="middle"/>
+<pin name="RESET" x="-10.16" y="-12.7" visible="pin" length="middle"/>
+<pin name="INT" x="-10.16" y="-10.16" visible="pin" length="middle"/>
+<pin name="SDA" x="17.78" y="-12.7" visible="pin" length="middle" rot="R180"/>
+<pin name="SCL" x="17.78" y="-15.24" visible="pin" length="middle" rot="R180"/>
+<wire x1="-7.62" y1="12.7" x2="15.24" y2="12.7" width="0.254" layer="97"/>
+<wire x1="15.24" y1="12.7" x2="15.24" y2="-17.78" width="0.254" layer="97"/>
+<wire x1="15.24" y1="-17.78" x2="-7.62" y2="-17.78" width="0.254" layer="97"/>
+<wire x1="-7.62" y1="-17.78" x2="-7.62" y2="12.7" width="0.254" layer="97"/>
+<text x="-5.08" y="13.97" size="2.54" layer="97">MCP23008</text>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="3MM_HOLE" prefix="H">
-<description>Cool looking 3mm hole with ground connection</description>
+<deviceset name="MCP23008">
+<description>MSP23008 I2C Port Expander 8 Pin</description>
 <gates>
-<gate name="G$1" symbol="3MM_HOLE" x="0" y="0"/>
+<gate name="G$1" symbol="MCP23008" x="7.62" y="17.78"/>
 </gates>
 <devices>
-<device name="" package="3MM_HOLE">
+<device name="" package="SOIC18">
 <connects>
-<connect gate="G$1" pin="GND" pad="P$1 P$2 P$3 P$4 P$5 P$6 P$7 P$8 P$9"/>
+<connect gate="G$1" pin="A0" pad="5"/>
+<connect gate="G$1" pin="A1" pad="4"/>
+<connect gate="G$1" pin="A2" pad="3"/>
+<connect gate="G$1" pin="GND" pad="9"/>
+<connect gate="G$1" pin="GP0" pad="10"/>
+<connect gate="G$1" pin="GP1" pad="11"/>
+<connect gate="G$1" pin="GP2" pad="12"/>
+<connect gate="G$1" pin="GP3" pad="13"/>
+<connect gate="G$1" pin="GP4" pad="14"/>
+<connect gate="G$1" pin="GP5" pad="15"/>
+<connect gate="G$1" pin="GP6" pad="16"/>
+<connect gate="G$1" pin="GP7" pad="17"/>
+<connect gate="G$1" pin="INT" pad="8"/>
+<connect gate="G$1" pin="RESET" pad="6"/>
+<connect gate="G$1" pin="SCL" pad="1"/>
+<connect gate="G$1" pin="SDA" pad="2"/>
+<connect gate="G$1" pin="VCC" pad="18"/>
 </connects>
 <technologies>
 <technology name=""/>

@@ -52,7 +52,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
@@ -71,34 +71,64 @@
 </layers>
 <library>
 <packages>
-<package name="3MM_HOLE">
-<pad name="P$1" x="0" y="0" drill="3.2" diameter="6"/>
-<pad name="P$2" x="0" y="2.2225" drill="0.5" diameter="0.6096" stop="no" thermals="no"/>
-<pad name="P$3" x="0" y="-2.2225" drill="0.5" diameter="0.6096" stop="no" thermals="no"/>
-<pad name="P$4" x="2.2225" y="0" drill="0.5" diameter="0.6096" stop="no" thermals="no"/>
-<pad name="P$5" x="-2.2225" y="0" drill="0.5" diameter="0.6096" stop="no" thermals="no"/>
-<pad name="P$6" x="-1.5875" y="1.5875" drill="0.5" diameter="0.6096" stop="no" thermals="no"/>
-<pad name="P$7" x="1.5875" y="1.5875" drill="0.5" diameter="0.6096" stop="no" thermals="no"/>
-<pad name="P$8" x="1.5875" y="-1.5875" drill="0.5" diameter="0.6096" stop="no" thermals="no"/>
-<pad name="P$9" x="-1.5875" y="-1.5875" drill="0.5" diameter="0.6096" stop="no" thermals="no"/>
+<package name="SOP8">
+<smd name="TEMP" x="0" y="0" dx="0.72" dy="1.5" layer="1"/>
+<smd name="ISET" x="1.27" y="0" dx="0.72" dy="1.5" layer="1"/>
+<smd name="GND" x="2.54" y="0" dx="0.72" dy="1.5" layer="1"/>
+<smd name="VIN" x="3.81" y="0" dx="0.72" dy="1.5" layer="1"/>
+<smd name="BAT" x="3.81" y="5.72" dx="0.72" dy="1.5" layer="1"/>
+<smd name="OK" x="2.54" y="5.72" dx="0.72" dy="1.5" layer="1"/>
+<smd name="CH" x="1.27" y="5.72" dx="0.72" dy="1.5" layer="1"/>
+<smd name="FB" x="0" y="5.72" dx="0.72" dy="1.5" layer="1"/>
+<wire x1="-0.635" y1="4.445" x2="4.445" y2="4.445" width="0.127" layer="21"/>
+<wire x1="4.445" y1="4.445" x2="4.445" y2="1.27" width="0.127" layer="21"/>
+<wire x1="4.445" y1="1.27" x2="-0.635" y2="1.27" width="0.127" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="-0.635" y2="4.445" width="0.127" layer="21"/>
+<circle x="0" y="1.905" radius="0.254" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
-<symbol name="3MM_HOLE">
-<pin name="GND" x="-5.08" y="0" visible="off" length="middle"/>
-<circle x="0" y="0" radius="2.54" width="0.254" layer="97"/>
+<symbol name="CN3083">
+<pin name="VIN" x="0" y="15.24" visible="off" length="middle" rot="R270"/>
+<pin name="FB" x="10.16" y="7.62" visible="off" length="middle" rot="R180"/>
+<pin name="BAT" x="10.16" y="2.54" visible="off" length="middle" rot="R180"/>
+<pin name="TEMP" x="10.16" y="-5.08" visible="off" length="middle" rot="R180"/>
+<pin name="ISET" x="10.16" y="-10.16" visible="off" length="middle" rot="R180"/>
+<pin name="GND" x="0" y="-17.78" visible="off" length="middle" rot="R90"/>
+<pin name="OK" x="-10.16" y="-10.16" visible="off" length="middle"/>
+<pin name="CH" x="-10.16" y="-5.08" visible="off" length="middle"/>
+<wire x1="-7.62" y1="12.7" x2="7.62" y2="12.7" width="0.254" layer="97"/>
+<wire x1="7.62" y1="12.7" x2="7.62" y2="-15.24" width="0.254" layer="97"/>
+<wire x1="7.62" y1="-15.24" x2="-7.62" y2="-15.24" width="0.254" layer="97"/>
+<wire x1="-7.62" y1="-15.24" x2="-7.62" y2="12.7" width="0.254" layer="97"/>
+<text x="-3.175" y="10.16" size="1.27" layer="97">VIN</text>
+<text x="6.985" y="9.525" size="1.27" layer="97" rot="R180">FB</text>
+<text x="6.985" y="4.445" size="1.27" layer="97" rot="R180">BAT</text>
+<text x="6.985" y="-3.175" size="1.27" layer="97" rot="R180">TEMP</text>
+<text x="6.985" y="-8.255" size="1.27" layer="97" rot="R180">ISET</text>
+<text x="-3.81" y="-13.97" size="1.27" layer="97">GND</text>
+<text x="-6.35" y="-9.525" size="1.27" layer="97">OK</text>
+<text x="-6.35" y="-4.445" size="1.27" layer="97">CH</text>
+<text x="-5.08" y="-1.27" size="1.778" layer="95">CN3083</text>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="3MM_HOLE" prefix="H">
-<description>Cool looking 3mm hole with ground connection</description>
+<deviceset name="CN3083">
+<description>CN3083 - China Solarladeregler bis 600mA</description>
 <gates>
-<gate name="G$1" symbol="3MM_HOLE" x="0" y="0"/>
+<gate name="G$1" symbol="CN3083" x="7.62" y="15.24"/>
 </gates>
 <devices>
-<device name="" package="3MM_HOLE">
+<device name="" package="SOP8">
 <connects>
-<connect gate="G$1" pin="GND" pad="P$1 P$2 P$3 P$4 P$5 P$6 P$7 P$8 P$9"/>
+<connect gate="G$1" pin="BAT" pad="BAT"/>
+<connect gate="G$1" pin="CH" pad="CH"/>
+<connect gate="G$1" pin="FB" pad="FB"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="ISET" pad="ISET"/>
+<connect gate="G$1" pin="OK" pad="OK"/>
+<connect gate="G$1" pin="TEMP" pad="TEMP"/>
+<connect gate="G$1" pin="VIN" pad="VIN"/>
 </connects>
 <technologies>
 <technology name=""/>
